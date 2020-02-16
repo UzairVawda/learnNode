@@ -6,5 +6,8 @@ insertCards is a small project that uses node, express and mongodb to add and re
 
 This should be used as a learning tool. 
 
+CITATION:
+https://www.youtube.com/watch?v=-JcgwLIh0Z4&list=PL55RiY5tL51oGJorjEgl6NVeDbx_fO5jR&index=16
+
 --Uzair Vawda
 
