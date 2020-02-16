@@ -3,13 +3,14 @@
   <div class="col-sm-6">
     <div class="card text-center">
       <div class="card-header"> Delete Information </div>
-        <form>
+        <form action="/delete" method="post">
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
-                <input type="text" class="form-control" placeholder="id" required>
-            </li>
+                <label for="title">ID</label>
+                <input type="text" class="form-control" placeholder="ID" name="id" required >
+              </li>
             <li class="list-group-item">
-              <button type="button" class="btn btn-primary" class="mx-auto">Insert</button>
+              <button type="button submit" class="btn btn-primary" class="mx-auto">Delete</button>
             </li>
           </ul>
         </form>
@@ -20,18 +21,20 @@
     <div class="card text-center">
       <div class="card-header"> Get Data </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            {{# each items }}
+          {{# each items }}
+            <li class="list-group-item">
               <article class="item">
                   <div>Title: {{ this.title }}</div>
                   <div>Content: {{ this.content }}</div>
                   <div>Author: {{ this.author }}</div>
                   <div>ID: {{ this._id }}</div>
               </article>
-            {{/each}}
-          </li>
+            </li>
+          {{/each}}
           <li class="list-group-item">
-            <a href="insert/get-data"><button type="button" class="btn btn-warning" class="mx-auto">Get Data</button></a>
+            <a href="delete/get-data">
+              <button type="button" class="btn btn-warning" class="mx-auto">Get Data</button>
+            </a>
           </li>
         </ul>
     </div>

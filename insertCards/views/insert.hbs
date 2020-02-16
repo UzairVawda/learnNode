@@ -10,11 +10,11 @@
                   <input type="text" class="form-control" placeholder="Title" name="title" required>
               </li>
               <li class="list-group-item">
-                  <label for="title">Author</label>  
+                  <label for="author">Author</label>  
                   <input type="text" class="form-control" placeholder="Author" name="author" required>
               </li>
               <li class="list-group-item">
-                  <label for="title">Content</label>
+                  <label for="content">Content</label>
                   <textarea class="form-control" placeholder="Content" name="content" required></textarea>
               </li>
               <li class="list-group-item">
@@ -29,18 +29,20 @@
     <div class="card text-center">
       <div class="card-header"> Get Data </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            {{# each items }}
+          {{# each items }}
+            <li class="list-group-item">
               <article class="item">
                   <div>Title: {{ this.title }}</div>
                   <div>Content: {{ this.content }}</div>
                   <div>Author: {{ this.author }}</div>
                   <div>ID: {{ this._id }}</div>
               </article>
-            {{/each}}
-          </li>
+            </li>
+          {{/each}}
           <li class="list-group-item">
-            <a href="insert/get-data"><button type="button" class="btn btn-warning" class="mx-auto">Get Data</button></a>
+            <a href="insert/get-data">
+              <button type="button" class="btn btn-warning" class="mx-auto">Get Data</button>
+            </a>
           </li>
         </ul>
     </div>

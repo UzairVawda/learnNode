@@ -45,3 +45,9 @@ form button:hover {
     background: #80cca0;
     padding: 5px;
 }
+
+.scroll-box {
+    overflow-y: scroll;
+    height: 100px;
+    padding: 1rem
+}
