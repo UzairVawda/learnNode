@@ -1,0 +1,48 @@
+<h1>{{ title }}</h1>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card text-center">
+      <div class="card-header"> Insert Information </div>
+        <form action="/insert" method="post">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                  <label for="title">Title</label>
+                  <input type="text" class="form-control" placeholder="Title" name="title" required>
+              </li>
+              <li class="list-group-item">
+                  <label for="title">Author</label>  
+                  <input type="text" class="form-control" placeholder="Author" name="author" required>
+              </li>
+              <li class="list-group-item">
+                  <label for="title">Content</label>
+                  <textarea class="form-control" placeholder="Content" name="content" required></textarea>
+              </li>
+              <li class="list-group-item">
+                  <button type="button submit" class="btn btn-primary" class="mx-auto" >Insert</button>
+              </li>
+            </ul>
+        </form>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card text-center">
+      <div class="card-header"> Get Data </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            {{# each items }}
+              <article class="item">
+                  <div>Title: {{ this.title }}</div>
+                  <div>Content: {{ this.content }}</div>
+                  <div>Author: {{ this.author }}</div>
+                  <div>ID: {{ this._id }}</div>
+              </article>
+            {{/each}}
+          </li>
+          <li class="list-group-item">
+            <a href="insert/get-data"><button type="button" class="btn btn-warning" class="mx-auto">Get Data</button></a>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
